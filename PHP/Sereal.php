@@ -403,12 +403,14 @@ namespace Sereal {
 		
 		protected function _d_22 ()  # TAG:FLOAT
 		{
-			return unpack('f', $this->_take(4));
+			$value = unpack('f', $this->_take(4));
+			return reset($value);
 		}
 		
 		protected function _d_23 ()  # TAG:DOUBLE
 		{
-			return unpack('d', $this->_take(8));
+			$value = unpack('d', $this->_take(8));
+			return reset($value);
 		}
 		
 		# TAG:LONG_DOUBLE - not implemented
